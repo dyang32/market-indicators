@@ -13,6 +13,89 @@ Technical analysis indicators and options trading analysis.
 
 ---
 
+## When to Use What
+
+Use this guide to pick the right tool for the job. Each section lists choices from best to last resort.
+
+### I want to screen stocks by filters
+
+| Priority | Tool | Command |
+|----------|------|---------|
+| **1st** | FinViz screener | `python scripts/screener.py Key=Value Key=Value` |
+| 2nd | FinViz full_info | `python scripts/full_info.py TICKER` |
+
+FinViz first — fastest, most filters available.
+
+### I want fundamentals, financials, or valuation data
+
+| Priority | Tool | Command |
+|----------|------|---------|
+| **1st** | FinViz fundamentals | `python scripts/fundamentals.py TICKER` |
+| 2nd | FinViz statements | `python scripts/statements.py TICKER` |
+| 3rd | FinViz full_info | `python scripts/full_info.py TICKER` |
+
+### I want news or market news
+
+| Priority | Tool | Command |
+|----------|------|---------|
+| **1st** | FinViz news | `python scripts/news.py TICKER` |
+| 2nd | FinViz market_news | `python scripts/market_news.py` |
+
+### I want insider trading or institutional data
+
+| Priority | Tool | Command |
+|----------|------|---------|
+| **1st** | FinViz insider | `python scripts/insider.py TICKER` |
+| 2nd | FinViz market_insider | `python scripts/market_insider.py` |
+
+### I want analyst ratings or price targets
+
+| Priority | Tool | Command |
+|----------|------|---------|
+| **1st** | FinViz ratings | `python scripts/ratings.py TICKER` |
+
+### I want peer / competitor tickers
+
+| Priority | Tool | Command |
+|----------|------|---------|
+| **1st** | FinViz peers | `python scripts/peers.py TICKER` |
+
+### I want to analyze an option contract
+
+| Priority | Tool | Command |
+|----------|------|---------|
+| **1st** | Options analysis | `python scripts/options.py NVDA 20260620 C 130` |
+
+Builds TTM symbol automatically, returns quotes, Greeks, spread analysis.
+
+### I want a technical indicator (RSI, MACD, etc.)
+
+| Priority | Tool | Command |
+|----------|------|---------|
+| **1st** | Indicator scripts | `python scripts/rsi.py TICKER daily` |
+
+Available: RSI, MACD, SMA, EMA, Bollinger Bands, ATR, ADX, BX-Trender, Williams %R, RVOL, Market Bias, Volatility/Sharpe.
+
+See `indicators/` for per-indicator documentation.
+
+### I want to analyze charts visually
+
+| Priority | Tool | What to do |
+|----------|------|------------|
+| **1st** | TradingView MCP | See `tradingview/SKILL.md` |
+
+Requires TradingView Desktop with debug port open.
+
+### I want to build a custom dashboard or interact with a logged-in site
+
+| Priority | Tool | What to do |
+|----------|------|------------|
+| **1st** | browser-persistent | See `browsers/browser-persistent/SKILL.md` |
+
+Serves HTML from Hermes, accessed via browser with full session cookies.
+
+---
+
 ## Available Scripts
 
 All indicator scripts accept: `<TICKER> <TIMEFRAME>`
