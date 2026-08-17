@@ -44,6 +44,7 @@ The goal is not to replace a full trading platform. It is to provide reusable bu
 - Black-Scholes Greeks and options-spread analysis
 - FinViz financial data: fundamentals, news, insider trading, analyst ratings, peer tickers, financial statements, and custom screeners
 - TradingView Desktop control via Chrome DevTools Protocol — charts, indicators, alerts, Pine Script, screenshots, replay trading
+- Persistent browser webpages via browser-use — serve HTML dashboards from Hermes with full session cookies
 - Minimal setup and a small dependency footprint
 - Designed to be easy to modify, automate, and extend
 
@@ -149,6 +150,19 @@ cd market-indicators/tradingview/scripts
 ```
 
 See `tradingview/SKILL.md` for full setup steps and `tradingview/SETUP_GUIDE.md` for detailed instructions.
+
+## Browsers — Persistent Webpages
+
+Serve instant HTML pages from Hermes and access them with browser-use using the same Chrome session with full session cookies. Great for dashboards, logged-in trading tools, and custom UIs.
+
+### Setup
+
+1. Write HTML files to `browsers/persistent/www/`
+2. Start the HTTP server: `cd browsers/persistent && python -m http.server 8787`
+3. Navigate with browser-use: `new_tab("http://localhost:8787/index.html")`
+4. Kill the server when done
+
+See `browsers/persistent/SKILL.md` for the full workflow.
 
 ## Quick Start
 
@@ -292,19 +306,17 @@ market-indicators/
 │   ├── full_info.py           ← FinViz
 │   └── screener.py            ← FinViz
 ├── tradingview/               ← TradingView MCP server
-│   ├── SKILL.md               ← setup and usage guide
-│   ├── SETUP_GUIDE.md         ← detailed setup walkthrough
-│   ├── README.md              ← full MCP tool reference
+│   ├── SKILL.md
+│   ├── SETUP_GUIDE.md
+│   ├── README.md
 │   ├── package.json
 │   ├── src/
-│   │   ├── server.js
-│   │   ├── connection.js
-│   │   ├── core/
-│   │   ├── cli/
-│   │   └── tools/
 │   ├── scripts/
-│   │   └── launch_tv_debug.bat
 │   └── references/
+├── browsers/
+│   └── persistent/
+│       ├── SKILL.md
+│       └── www/             ← HTML files served here
 ├── SKILL.md                  ← main skill documentation
 ├── README.md
 └── LICENSE

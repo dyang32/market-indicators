@@ -1,6 +1,6 @@
 ---
 name: marketindicators
-description: Technical analysis indicators, options trading analysis, and FinViz financial data — RSI, MACD, Bollinger Bands, SMA, EMA, ATR, ADX, BX-Trender, Williams %R, RVOL, Market Bias, option spreads, Greeks, fundamentals, news, insider trading, screener. Plus TradingView Desktop control (MCP server).
+description: Technical analysis indicators, options trading analysis, and FinViz financial data — RSI, MACD, Bollinger Bands, SMA, EMA, ATR, ADX, BX-Trender, Williams %R, RVOL, Market Bias, option spreads, Greeks, fundamentals, news, insider trading, screener. Plus TradingView Desktop control (MCP server) and persistent browser webpages via browser.
 category: MySKILLS
 ---
 
@@ -68,6 +68,14 @@ Control TradingView Desktop via Chrome DevTools Protocol. MCP server — require
 | `tradingview/SKILL.md` | Setup and usage guide |
 | `tradingview/scripts/launch_tv_debug.bat` | Launch TradingView with debug port |
 | `tradingview/src/server.js` | MCP server (loads through Hermes MCP system) |
+
+### Browsers
+
+Create instant HTML dashboards served from Hermes, accessed via browser with full session cookies. See `browsers/browser-persistent/SKILL.md`.
+
+| Script | What it does |
+|--------|-------------|
+| `browsers/browser-persistent/SKILL.md` | Persistent webpage + browser workflow |
 
 ---
 
@@ -193,6 +201,9 @@ marketindicators/
     └── SKILL.md
 └── tradingview/
     └── SKILL.md          ← TradingView Desktop control (MCP server)
+└── browsers/
+    └── browser-persistent/
+        └── SKILL.md      ← Persistent HTML pages via browser
 ```
 
 ---
