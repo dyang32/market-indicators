@@ -1,6 +1,6 @@
 # Market Indicators
 
-A lightweight Python toolkit for technical analysis and options research.
+A lightweight Python toolkit for technical analysis and options research, designed as an agent skill for [Hermes Agent](https://github.com/NousResearch/Hermes) but compatible with any AI agent that can run Python scripts from the terminal.
 
 Built for traders and developers who want fast, scriptable market signals without a heavy charting platform, paid indicator package, or a large dependency stack. Each tool can run independently from the command line, making it easy to use in terminal workflows, automation scripts, spreadsheets, AI agents, or custom trading dashboards.
 
