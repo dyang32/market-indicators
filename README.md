@@ -2,6 +2,8 @@
 
 A lightweight Python toolkit for technical analysis and options research, designed as an agent skill for [Hermes Agent](https://github.com/NousResearch/Hermes) but compatible with any AI agent that can run Python scripts from the terminal.
 
+**No API keys required** — all market data is sourced from Yahoo Finance (`yfinance`) and FinViz, both of which are free and require no authentication.
+
 Built for traders and developers who want fast, scriptable market signals without a heavy charting platform, paid indicator package, or a large dependency stack. Each tool can run independently from the command line, making it easy to use in terminal workflows, automation scripts, spreadsheets, AI agents, or custom trading dashboards.
 
 This project is for research and educational use only. It does not provide financial advice or automated trade execution.
